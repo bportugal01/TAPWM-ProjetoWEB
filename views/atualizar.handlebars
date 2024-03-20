@@ -1,0 +1,90 @@
+<div class="container">
+    <form style="background-color:#8ebdb6;  padding:0px 20px 20px 20px;" class="needs-validation" novalidate>
+        <div class="container"><br>
+            <h3>Atualizar - Agendamento de Potenciais Clientes</h3>
+            <label>Sistema utilizado para agendamento de serviços.</label><br><br>
+
+            <div class="form-group">
+                <label for="validationCustomUsername" class="form-label">Nome</label>
+                <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" style="background-color: #d8dedf;"
+                        placeholder="Digite seu nome" required>
+                    <div class="invalid-feedback">
+                        <b>Por favor informe seu nome.</b>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="validationCustomTelefone" class="form-label">Telefone</label>
+                <div class="input-group has-validation">
+                    <input type="tel" class="form-control" id="validationCustomTelefone"
+                        aria-describedby="inputGroupPrepend" style="background-color: #d8dedf;"
+                        placeholder="Digite seu telefone" required>
+                    <div class="invalid-feedback">
+                        <b>Por favor informe seu telefone.</b>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="origem" class="form-label">Origem</label>
+                <div class="input-group has-validation">
+                    <select class="form-control" id="origem" style="background-color: #d8dedf;"
+                        aria-describedby="inputGroupPrepend" required name="origem">
+                        <option value="" selected disabled>Selecione...</option>
+                        <option>Linkedin</option>
+                        <option>Whatsapp</option>
+                        <option>Telegram</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        <b> Por favor, selecione uma origem.</b>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="validationCustomData" class="form-label">Data do Contato:</label>
+                <div class="input-group has-validation">
+                    <input type="date" class="form-control table-secondary" id="validationCustomData"
+                        aria-describedby="inputGroupPrepend" style="background-color: #d8dedf;" required>
+                    <div class="invalid-feedback">
+                        <b>Por favor informe a data do contato.</b>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="form-label">Observações</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Digite suas observações"
+                    style="background-color: #d8dedf;" aria-describedby="inputGroupPrepend" required
+                    rows="3"></textarea>
+                <div class="invalid-feedback">
+                    <b>Por favor informe o conteúdo.</b>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn  btn-secondary" style="background-color: #063940;">Cadastrar</button>
+        </div>
+    </form>
+
+    <script>
+        (() => {
+            'use strict';
+
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.from(forms).forEach((form) => {
+                form.addEventListener('submit', (event) => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
+</div>

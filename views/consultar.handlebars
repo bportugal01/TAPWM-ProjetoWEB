@@ -1,0 +1,80 @@
+<div class="container">
+    <form style="background-color: #8ebdb6; padding:0px 20px 20px 20px;">
+        <div class="container"><br>
+            <h3>Consultar - Agendamento de Potenciais Clientes</h3>
+            <label>Sistema utilizado para agendamento de serviços.</label><br><br>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-striped table-bordered table-secondary ">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Origem</th>
+                            <th scope="col">Data de Contato</th>
+                            <th scope="col">Observações</th>
+                            <th scope="col">Editar - Excluir</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+
+                            <td><a href="/atualizar" type="button" class="btn btn-secondary"
+                                    style="background-color: #063940;">Editar</a>&nbsp;
+                                <button type="button" id="delete" class="btn btn-secondary"
+                                    style="background-color: #de1e2e;">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>@fat</td>
+                            <td><a href="/atualizar" type="button" class="btn btn-secondary"
+                                    style="background-color: #063940;">Editar</a>&nbsp;
+                                <button type="button" id="delete" class="btn btn-secondary"
+                                    style="background-color: #de1e2e;">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@fat</td>
+                            <td><a href="/atualizar" type="button" class="btn btn-secondary"
+                                    style="background-color: #063940;">Editar</a>&nbsp;
+                                <button type="button" id="delete" class="btn btn-secondary"
+                                    style="background-color: #de1e2e;">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    document.getElementById("delete").addEventListener("click", function () {
+        Swal.fire({
+            title: "Deletado!",
+            text: "Seu registro foi apagado.",
+            icon: "success",
+            background: "#d5efeb",
+            iconColor: "green",
+            confirmButtonColor: "#063940",
+            textColor: "#000000",
+            confirmButtonText: "Ok"
+        });
+    });
+</script>
